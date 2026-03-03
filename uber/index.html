@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+.resume-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 38px 32px 32px 32px;
+}
+.profile-img {
+  display: block;
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto 28px auto;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  letter-spacing: 1px;
+}
+.summary {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  color: #333;
+  text-align: center;
+}
+.experience-section {
+  background: #f3f6fa;
+  border-radius: 10px;
+  padding: 26px 22px 18px 22px;
+}
+.experience-section h2 {
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin: 0 0 18px 0;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+.role-title {
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  color: #2d3748;
+  font-size: 1.07rem;
+}
+.dates {
+  font-size: 0.98rem;
+  color: #6b7280;
+  margin-left: 6px;
+  font-weight: 400;
+}
+ul {
+  margin: 0 0 0 18px;
+  padding: 0;
+  list-style: disc;
+}
+li {
+  margin-bottom: 10px;
+  font-size: 1.01rem;
+  line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .resume-container {
+    padding: 18px 6vw 18px 6vw;
+  }
+  .profile-img {
+    max-width: 100px;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .experience-section {
+    padding: 14px 6vw 10px 6vw;
+  }
+}
+</style>
+</head>
+<body>
+<div class="resume-container">
+  <img class="profile-img" src="./profile.jpeg" alt="Dawn Choo" />
+  <h1>Dawn Choo</h1>
+  <div class="summary">
+    Senior Data Scientist and Co-founder with 8+ years of experience at Meta, Amazon, and high-growth startups including Patreon and ClassDojo. Deep expertise in anomaly detection and causal inference, including building an automated detection pipeline that reduced time-to-detection from days to under 2 hours and developing diff-in-diff frameworks to measure incremental revenue impact. Also experienced working with messy, behavioral data, building churn prediction models on noisy transactional features that shaped product roadmaps and prioritized six experiments in one quarter.
+  </div>
+  <div class="experience-section">
+    <h2>Relevant Work Experience</h2>
+    <div class="role-title">AI Ed Tech Start-up — Co-founder<span class="dates">, Oct 2024–Present</span></div>
+    <ul>
+      <li>Developed LLM evaluation agent that improved SQL query grading accuracy from 80% to 95% (SQL-focused modeling and prototyping)</li>
+      <li>Designed and implemented a RAG-based content pipeline to generate personalized practice questions across SQL, Python, statistics, and ML system design (applied modeling & productionization)</li>
+      <li>Launched platform to 10k users in 4 months (product impact and growth)</li>
+    </ul>
+    <div class="role-title">Class Teachers Dojo — Senior Data Scientist<span class="dates">, Sep 2023–Oct 2024</span></div>
+    <ul>
+      <li>Led price-increase experiments across regions and segments, delivering +21% incremental subscription revenue (experimental design & causal impact)</li>
+      <li>Designed and maintained A/B testing framework and statistical methodology documentation (advanced experimentation standards)</li>
+      <li>Built propensity-to-convert models to identify high-value free users, increasing trial→paid conversion by 15% (predictive modeling; SQL/Python)</li>
+    </ul>
+    <div class="role-title">Patreon Patron — Senior Data Scientist<span class="dates">, Oct 2022–Aug 2023</span></div>
+    <ul>
+      <li>Completed cancellation analyses that shaped the H1 roadmap and prioritized six experiments in one quarter (causal insights → product prioritization)</li>
+      <li>Built churn prediction models using gradient-boosted trees on behavioral and transactional features (robust modeling on noisy/behavioral data)</li>
+      <li>Designed and socialized a creator health scoring framework combining engagement, earnings trajectory, and content frequency (actionable prioritization for PMs)</li>
+      <li>Repositioned Data Science from a service desk to a product-focused team (influence and cross-functional communication)</li>
+    </ul>
+    <div class="role-title">Beta Meta — Senior Data Scientist<span class="dates"> (Jun 2021–Sep 2022) / Data Scientist (Jun 2019–Jun 2021)</span></div>
+    <ul>
+      <li>Developed causal inference framework (diff‑in‑diff, synthetic control) to measure incremental revenue impact of Shopping feature launches (rigorous causal methods)</li>
+      <li>Built automated anomaly detection pipeline for key Shopping metrics, reducing time‑to‑detection for revenue‑impacting bugs from days to under 2 hours (anomaly detection/monitoring)</li>
+      <li>Defined and implemented new latency metrics and influenced adoption of latency goals, resulting in +80% engagement on the Shopping Tab (metrics, cross‑functional influence)</li>
+      <li>Pioneered Performance & Reliability team and convinced leadership to reallocate investment to higher‑ROI projects (senior stakeholder influence and high‑impact decisioning)</li>
+    </ul>
+    <div class="role-title">Amazing Amazon — Business Intelligence Engineer, Team Lead<span class="dates">, May 2017–Jun 2019</span></div>
+    <ul>
+      <li>Established and maintained data pipelines from 8 data sources, reducing time spent pulling data by over 90% (data engineering and messy data handling)</li>
+      <li>Developed forecasting models for advertising revenue, improving quarterly forecast accuracy by 25% (time‑series/forecasting and optimization)</li>
+      <li>Created self‑service BI tools and Redshift reporting views that reduced ad‑hoc data requests by 60% (SQL/Redshift, dashboards for stakeholders)</li>
+      <li>Led a team covering $1.1B of ad business—setting priorities, roadmaps, and Quarterly Business Reviews (leadership and senior stakeholder collaboration)</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
