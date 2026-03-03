@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dawn Choo - Job Application</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+nav .nav-title {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+}
+
+nav .company-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #006aff;
+}
+
+nav .company-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+.hero {
+  background-color: #f5f5f5;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.hero .profile-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.title-badge {
+  display: inline-block;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero .applying-to {
+  font-size: 16px;
+  color: #666666;
+  letter-spacing: 1px;
+}
+
+.hero .applying-to strong {
+  color: #006aff;
+  font-weight: 700;
+}
+
+.summary {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  background-color: #ffffff;
+}
+
+.summary h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.summary p {
+  font-size: 17px;
+  color: #444444;
+  line-height: 1.8;
+}
+
+.experience {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px 80px 40px;
+  background-color: #ffffff;
+}
+
+.experience h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+  padding-top: 40px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.job {
+  margin-bottom: 40px;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.job ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.job ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #444444;
+  line-height: 1.7;
+}
+
+.job ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #006aff;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<nav>
+<span class="nav-title">JOB APPLICATION</span>
+<div class="company-logo">
+  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 50L50 20L90 50L50 35L10 50Z" fill="#006aff"/>
+    <path d="M20 52V80H40V60H60V80H80V52L50 38L20 52Z" fill="#006aff"/>
+  </svg>
+  Zillow
+</div>
+</nav>
+
+<div class="hero">
+<img src="./profile.jpeg" alt="Dawn Choo" class="profile-image">
+<h1>Dawn Choo</h1>
+<div class="title-badge">SENIOR DATA SCIENTIST · CO-FOUNDER</div>
+<p class="applying-to">APPLYING TO <strong>ZILLOW</strong></p>
+</div>
+
+<div class="summary">
+<h2>Summary</h2>
+</div>
+
+<div class="experience">
+<h2>Relevant Work Experience</h2>
+
+<div class="job">
+  <h3>AI Ed Tech Start-up — Co-founder</h3>
+  <ul>
+    <li>Developed LLM evaluation agent that improved SQL query grading accuracy from 80% to 95%.</li>
+    <li>Designed and implemented a RAG-based content pipeline to generate personalized practice questions across SQL, Python, statistics, and ML system design topics.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <h3>Class Teachers Dojo — Senior Data Scientist</h3>
+  <ul>
+    <li>Designed and maintained A/B testing framework and statistical methodology documentation, standardizing experimentation practices across the revenue team.</li>
+    <li>Led price increase workstream and experiments across multiple regions and segments, resulting in +21% incremental subscription revenue.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <h3>Patreon Patron — Senior Data Scientist</h3>
+  <ul>
+    <li>Built churn prediction models using gradient-boosted trees on behavioral and transactional features to enable proactive retention interventions.</li>
+    <li>Completed analyses to understand why people were canceling memberships, which directly resulted in prioritization of 6 experiments in one quarter.</li>
+    <li>Designed and socialized a creator health scoring framework combining engagement, earnings trajectory, and content frequency to help PMs prioritize product investments.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <h3>Beta Meta — Senior Data Scientist / Data Scientist</h3>
+  <ul>
+    <li>Developed causal inference framework using diff-in-diff and synthetic control methods to measure incremental revenue impact of feature launches (standardized across the org).</li>
+    <li>Built automated anomaly detection pipeline monitoring key Shopping metrics, reducing time-to-detection for revenue-impacting bugs from days to under 2 hours.</li>
+    <li>Led definition & implementation of new latency metrics and influenced adoption of latency goals, driving +80% user engagement on the Shopping Tab.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <h3>Amazing Amazon — Business Intelligence Engineer, Team Lead</h3>
+  <ul>
+    <li>Established and maintained data pipelines from 8 data sources, reducing average time spent pulling data by over 90%.</li>
+    <li>Developed forecasting models for advertising revenue across product lines, improving quarterly forecast accuracy by 25%.</li>
+    <li>Created self-service BI tools and Redshift-based reporting views that reduced ad-hoc data request volume by 60%.</li>
+  </ul>
+</div>
+</div>
+</body>
+</html>
