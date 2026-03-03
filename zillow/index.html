@@ -15,45 +15,54 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #222;
-    background-color: #fff;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: #fff;
+    padding: 20px 60px;
+    background: #fff;
     border-bottom: 1px solid #e0e0e0;
 }
 
-.navbar-title {
-    font-size: 14px;
+.navbar-brand {
     font-weight: 700;
+    font-size: 14px;
     letter-spacing: 2px;
     color: #333;
 }
 
 .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #006AFF;
+}
+
+.navbar-logo svg {
+    width: 32px;
     height: 32px;
 }
 
 .hero {
-    background-color: #f5f5f5;
+    background: #f5f5f5;
     padding: 80px 20px;
     text-align: center;
 }
 
-.profile-photo {
+.hero-image {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    border: 6px solid #222;
     object-fit: cover;
+    border: 6px solid #222;
     margin-bottom: 30px;
 }
 
-.candidate-name {
+.hero-name {
     font-size: 48px;
     font-weight: 800;
     color: #111;
@@ -61,34 +70,39 @@ body {
     letter-spacing: -1px;
 }
 
-.title-badge {
+.hero-badge {
     display: inline-block;
-    background-color: #222;
+    background: #222;
     color: #fff;
     padding: 12px 28px;
     border-radius: 50px;
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 25px;
 }
 
-.applying-to {
+.hero-applying {
     font-size: 18px;
-    color: #555;
-    font-weight: 500;
+    color: #444;
+    margin-bottom: 8px;
 }
 
-.applying-to span {
-    font-weight: 700;
+.hero-applying strong {
     color: #006AFF;
+}
+
+.hero-team {
+    font-size: 14px;
+    color: #666;
 }
 
 .section {
     max-width: 800px;
     margin: 0 auto;
-    padding: 60px 30px;
+    padding: 60px 20px;
+    background: #fff;
 }
 
 .section-title {
@@ -96,37 +110,29 @@ body {
     font-weight: 700;
     color: #111;
     margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #222;
-    display: inline-block;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #006AFF;
 }
 
-.summary-text {
-    font-size: 17px;
+.section-content {
+    font-size: 16px;
+    color: #444;
     line-height: 1.8;
-    color: #333;
 }
 
-.why-hire-section {
-    background-color: #fafafa;
-}
-
-.why-hire-list {
+.section-content ul {
     list-style: none;
     padding: 0;
 }
 
-.why-hire-list li {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 20px;
+.section-content ul li {
+    padding: 12px 0;
     padding-left: 25px;
     position: relative;
 }
 
-.why-hire-list li::before {
-    content: "✓";
+.section-content ul li::before {
+    content: "→";
     position: absolute;
     left: 0;
     color: #006AFF;
@@ -141,112 +147,158 @@ body {
     margin-bottom: 0;
 }
 
-.job-title {
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.experience-company {
     font-size: 20px;
     font-weight: 700;
     color: #111;
-    margin-bottom: 12px;
 }
 
-.job-bullets {
+.experience-role {
+    font-size: 14px;
+    color: #006AFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.experience-bullets {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
 }
 
-.job-bullets li {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #444;
-    margin-bottom: 10px;
+.experience-bullets li {
+    padding: 8px 0;
     padding-left: 20px;
     position: relative;
+    font-size: 15px;
+    color: #555;
 }
 
-.job-bullets li::before {
+.experience-bullets li::before {
     content: "•";
     position: absolute;
     left: 0;
     color: #006AFF;
-    font-weight: bold;
+    font-weight: 700;
+}
+
+.divider {
+    height: 1px;
+    background: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto;
 }
 </style>
 </head>
 <body>
 <nav class="navbar">
-<div class="navbar-title">JOB APPLICATION</div>
-<svg class="navbar-logo" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-    <path d="M25 10 L15 20 L15 35 L35 35 L35 20 Z" fill="#006AFF"/>
-    <rect x="22" y="25" width="6" height="10" fill="#fff"/>
-    <text x="45" y="32" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#006AFF">Zillow</text>
-</svg>
+<div class="navbar-brand">JOB APPLICATION</div>
+<div class="navbar-logo">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 50L50 20L90 50L50 35L10 50Z" fill="#006AFF"/>
+        <path d="M20 55V80H40V65H60V80H80V55L50 40L20 55Z" fill="#006AFF"/>
+    </svg>
+    Zillow
+</div>
 </nav>
 
 <section class="hero">
-<img src="./profile.jpeg" alt="Dawn Choo wearing Zillow t-shirt" class="profile-photo">
-<h1 class="candidate-name">Dawn Choo</h1>
-<div class="title-badge">SENIOR DATA SCIENTIST · CO-FOUNDER</div>
-<p class="applying-to">APPLYING TO <span>ZILLOW</span></p>
+<img src="./profile.jpeg" alt="Dawn Choo" class="hero-image">
+<h1 class="hero-name">Dawn Choo</h1>
+<div class="hero-badge">SENIOR DATA SCIENTIST · CO-FOUNDER</div>
+<p class="hero-applying">APPLYING TO <strong>ZILLOW</strong></p>
+<p class="hero-team">Sr. Data Scientist · Business Data Team</p>
 </section>
+
+<section class="section">
+<h2 class="section-title">Why You Should Hire Me at Zillow</h2>
+<div class="section-content">
+    <ul>
+        <li>I have deep expertise in A/B testing and causal inference, having designed experimentation frameworks at Class Teachers Dojo and developed diff-in-diff and synthetic control methodologies at Meta that became standardized across the organization.</li>
+        <li>I bring 7+ years of experience working directly with product teams on complex quantitative problems, including building churn prediction models at Patreon, leading pricing experiments that drove +21% incremental revenue, and defining latency metrics that increased user engagement by 80%.</li>
+    </ul>
+</div>
+</section>
+
+<div class="divider"></div>
 
 <section class="section">
 <h2 class="section-title">Resume Summary</h2>
-<p class="summary-text">
-    Senior Data Scientist with 5+ years of experience at high-growth startups and big tech companies including Meta, Amazon, and Patreon. Extensive experience with ETL pipelines and productionalization, including building data pipelines from 8 sources that reduced data pull time by 90% and establishing end-to-end analytics infrastructure for 0-to-1 products. Deep expertise in A/B testing and causal inference, having designed org-wide experimentation frameworks and led pricing experiments that drove +21% incremental subscription revenue.
-</p>
+<div class="section-content">
+</div>
 </section>
 
-<section class="section why-hire-section">
-<h2 class="section-title">Why You Should Hire Me at Zillow?</h2>
-<ul class="why-hire-list">
-    <li>I have deep expertise in A/B testing and causal inference, having designed experimentation frameworks at Class Teachers Dojo and developed diff-in-diff and synthetic control methodologies at Meta that became standardized across the organization.</li>
-    <li>I bring 7+ years of experience working directly with product teams on complex quantitative problems, including building churn prediction models at Patreon, leading pricing experiments that drove +21% incremental revenue, and defining latency metrics that increased user engagement by 80%.</li>
-</ul>
-</section>
+<div class="divider"></div>
 
 <section class="section">
 <h2 class="section-title">Relevant Work Experience</h2>
+<div class="section-content">
+    <div class="experience-item">
+        <div class="experience-header">
+            <span class="experience-company">AI Ed Tech Start-up</span>
+            <span class="experience-role">Co-founder</span>
+        </div>
+        <ul class="experience-bullets">
+            <li>Developed LLM evaluation agent that improved SQL query grading accuracy from 80% to 95%.</li>
+            <li>Designed and implemented a RAG-based content pipeline to generate personalized practice questions across SQL, Python, statistics, and ML system design topics.</li>
+        </ul>
+    </div>
 
-<div class="experience-item">
-    <h3 class="job-title">AI Ed Tech Start-up — Co-founder</h3>
-    <ul class="job-bullets">
-        <li>Developed LLM evaluation agent that improved SQL query grading accuracy from 80% to 95%.</li>
-        <li>Designed and implemented a RAG-based content pipeline to generate personalized practice questions across SQL, Python, statistics, and ML system design topics.</li>
-    </ul>
-</div>
+    <div class="experience-item">
+        <div class="experience-header">
+            <span class="experience-company">Class Teachers Dojo</span>
+            <span class="experience-role">Senior Data Scientist</span>
+        </div>
+        <ul class="experience-bullets">
+            <li>Designed and maintained A/B testing framework and statistical methodology documentation, standardizing experimentation practices across the revenue team.</li>
+            <li>Led price increase workstream and experiments across multiple regions and segments, resulting in +21% incremental subscription revenue.</li>
+        </ul>
+    </div>
 
-<div class="experience-item">
-    <h3 class="job-title">Class Teachers Dojo — Senior Data Scientist</h3>
-    <ul class="job-bullets">
-        <li>Designed and maintained A/B testing framework and statistical methodology documentation, standardizing experimentation practices across the revenue team.</li>
-        <li>Led price increase workstream and experiments across multiple regions and segments, resulting in +21% incremental subscription revenue.</li>
-    </ul>
-</div>
+    <div class="experience-item">
+        <div class="experience-header">
+            <span class="experience-company">Patreon Patron</span>
+            <span class="experience-role">Senior Data Scientist</span>
+        </div>
+        <ul class="experience-bullets">
+            <li>Built churn prediction models using gradient-boosted trees on behavioral and transactional features to enable proactive retention interventions.</li>
+            <li>Completed analyses to understand why people were canceling memberships, which directly resulted in prioritization of 6 experiments in one quarter.</li>
+            <li>Designed and socialized a creator health scoring framework combining engagement, earnings trajectory, and content frequency to help PMs prioritize product investments.</li>
+        </ul>
+    </div>
 
-<div class="experience-item">
-    <h3 class="job-title">Patreon Patron — Senior Data Scientist</h3>
-    <ul class="job-bullets">
-        <li>Built churn prediction models using gradient-boosted trees on behavioral and transactional features to enable proactive retention interventions.</li>
-        <li>Completed analyses to understand why people were canceling memberships, which directly resulted in prioritization of 6 experiments in one quarter.</li>
-        <li>Designed and socialized a creator health scoring framework combining engagement, earnings trajectory, and content frequency to help PMs prioritize product investments.</li>
-    </ul>
-</div>
+    <div class="experience-item">
+        <div class="experience-header">
+            <span class="experience-company">Beta Meta</span>
+            <span class="experience-role">Senior Data Scientist / Data Scientist</span>
+        </div>
+        <ul class="experience-bullets">
+            <li>Developed causal inference framework using diff-in-diff and synthetic control methods to measure incremental revenue impact of feature launches (standardized across the org).</li>
+            <li>Built automated anomaly detection pipeline monitoring key Shopping metrics, reducing time-to-detection for revenue-impacting bugs from days to under 2 hours.</li>
+            <li>Led definition & implementation of new latency metrics and influenced adoption of latency goals, driving +80% user engagement on the Shopping Tab.</li>
+        </ul>
+    </div>
 
-<div class="experience-item">
-    <h3 class="job-title">Beta Meta — Senior Data Scientist / Data Scientist</h3>
-    <ul class="job-bullets">
-        <li>Developed causal inference framework using diff-in-diff and synthetic control methods to measure incremental revenue impact of feature launches (standardized across the org).</li>
-        <li>Built automated anomaly detection pipeline monitoring key Shopping metrics, reducing time-to-detection for revenue-impacting bugs from days to under 2 hours.</li>
-        <li>Led definition & implementation of new latency metrics and influenced adoption of latency goals, driving +80% user engagement on the Shopping Tab.</li>
-    </ul>
-</div>
-
-<div class="experience-item">
-    <h3 class="job-title">Amazing Amazon — Business Intelligence Engineer, Team Lead</h3>
-    <ul class="job-bullets">
-        <li>Established and maintained data pipelines from 8 data sources, reducing average time spent pulling data by over 90%.</li>
-        <li>Developed forecasting models for advertising revenue across product lines, improving quarterly forecast accuracy by 25%.</li>
-        <li>Created self-service BI tools and Redshift-based reporting views that reduced ad-hoc data request volume by 60%.</li>
-    </ul>
+    <div class="experience-item">
+        <div class="experience-header">
+            <span class="experience-company">Amazing Amazon</span>
+            <span class="experience-role">Business Intelligence Engineer, Team Lead</span>
+        </div>
+        <ul class="experience-bullets">
+            <li>Established and maintained data pipelines from 8 data sources, reducing average time spent pulling data by over 90%.</li>
+            <li>Developed forecasting models for advertising revenue across product lines, improving quarterly forecast accuracy by 25%.</li>
+            <li>Created self-service BI tools and Redshift-based reporting views that reduced ad-hoc data request volume by 60%.</li>
+        </ul>
+    </div>
 </div>
 </section>
 </body>
